@@ -6,6 +6,7 @@ from pynput import keyboard
 from elevenlabs import VoiceSettings
 from elevenlabs.client import ElevenLabs
 from openai import OpenAI
+import simpleaudio as sa
 # Set the API keys (replace with your actual API keys)
 ELEVENLABS_API_KEY = "sk_f8789524d1cfec38bce80749db8953a481c72012e01f9d35"
 OPENAI_API_KEY = "sk-proj-F4qPXJoI9ynDfup8zJl4T3BlbkFJAVHDOglFIymmrXkEpbTy"
