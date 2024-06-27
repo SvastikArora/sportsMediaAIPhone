@@ -132,6 +132,12 @@ def text_to_speech_stream(text: str):
             audio_stream.write(chunk)
     audio_stream.seek(0)
     return audio_stream
+    
+    def play_audio(audio_stream):
+    audio_data = audio_stream.read()
+    wave_obj = sa.WaveObject(audio_data, num_channels=1, bytes_per_sample=2, sample_rate=44100)
+    play_obj = wave_obj.play()
+    play_obj.wait_done()
 # Function to transcribe audio to text
 def transcribe_audio(audio_file_path):
     with open(audio_file_path, 'rb') as audio_file:
